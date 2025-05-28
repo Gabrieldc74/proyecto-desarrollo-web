@@ -4,11 +4,28 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-family: 'Dosis', sans-serif;
-    display: flex;
-    justify-content: center;
+/* ------ HEADER -------- */
+
+.encabezado {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  15vh 30vh;
+    grid-template-areas: "barra-menu"
+    "titulo";
 }
+
+.barra-menu {
+    grid-area: barra-menu;
+}
+
+.titulo {
+    grid-area: titulo;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin: 10px;
+    padding: 50px;
+}
+
 
 /* ------ MAIN (CONTENIDO) ------ */
 
@@ -65,4 +82,250 @@ footer {
     grid-area: footer;
     background-color: rgb(251, 251, 251);
     text-align: center;
+}
+
+
+
+
+/* ------MEDIA QUERIES ----- */
+
+
+/* ---Encabezado del index ---- */
+@media only screen and (max-width: 700px) {
+    .encabezado {
+        width: 200%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 200%;
+        grid-template-rows:  120vh 120vh 120vh 120vh;
+        grid-template-areas: "imgAvon"
+        "imgNatura"
+        "imgVioleta"
+        "video";
+    }
+
+    .imgAvon{
+        width: 80vh;
+        height: 100vh;
+    }
+
+    .imgNatura {
+        width: 80vh;
+        height: 100vh;
+    }
+
+    .imgVioleta {
+        width: 80vh;
+        height: 100vh;
+    }
+
+    .video {
+        width: 130vh;
+        height: 110vh;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    footer {
+        width: 200%;
+    }
+}
+
+
+/* -------VIOLETA ----- */
+
+.main-violeta {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: 80vh 80vh;
+    grid-template-areas: "img-v-1 img-v-2 img-v-3"
+        "img-v-4 img-v-5 img-v-6"
+}
+
+.img-v-1 {
+    grid-area: img-v-1;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-v-2 {
+    grid-area: img-v-2;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-v-3 {
+    grid-area: img-v-3;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-v-4 {
+    grid-area: img-v-4;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-v-5 {
+    grid-area: img-v-5;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-v-6 {
+    grid-area: img-v-6;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+/* ----Responsive Natura ----- */
+
+.main-natura {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows:  80vh 80vh;
+    grid-template-areas: "img-n-1 img-n-2 img-n-3"
+    "img-n-4 img-n-5 img-n-6";
+}
+
+.img-n-1{
+    grid-area: img-n-1;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-n-2{
+    grid-area: img-n-2;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-n-3{
+    grid-area: img-n-3;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+
+.img-n-4{
+    grid-area: img-n-4;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-n-5{
+    grid-area: img-n-5;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-n-6{
+    grid-area: img-n-6;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+    padding: 0.6875rem;
+    background-color: rgb(185, 202, 198);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .main-natura {
+        display: grid;
+        grid-template-columns: (2, 1fr);
+        grid-template-rows:  80vh 80vh 80vh;
+        grid-template-areas: "img-n-1 img-n-2"
+        "img-n-3 img-n-4"
+        "img-n-5 img-n-6";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main-natura {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  80vh 80vh 80vh 80vh 80vh 80vh;
+        grid-template-areas: "img-n-1"
+        "img-n-2"
+        "img-n-3"
+        "img-n-4"
+        "img-n-5"
+        "img-n-6";
+    }
 }
