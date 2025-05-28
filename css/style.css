@@ -1,6 +1,68 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------ MAIN (CONTENIDO) ------ */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows:  70vh 50vh;
+    grid-template-areas: "imgAvon imgNatura imgVioleta"
+    "video video video";
 }
 
 
+.imgAvon {
+    grid-area: imgAvon;
+    margin: 10px;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+}
+
+.imgNatura {
+    grid-area: imgNatura;
+    margin: 10px;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+}
+
+.imgVioleta {
+    grid-area: imgVioleta;
+    margin: 10px;
+    height: 57vh;
+    width: 48vh;
+    display: flex;
+    justify-self: center;
+}
+
+.video {
+    grid-area: video;
+        display: flex;
+    justify-self: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh;
+    grid-template-areas: "footer";
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(251, 251, 251);
+    text-align: center;
+}
