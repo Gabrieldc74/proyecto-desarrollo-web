@@ -1,0 +1,13 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh;
+    grid-template-areas: "PieDepagina";
+
+    div {
+        grid-area: PieDepagina;
+        width: 100%;
+        background-image: linear-gradient(0deg, rgb(235, 215, 228) 0%, rgba(144, 70, 130, 0.472) 38%);
+        text-align: center;
+    }
+}

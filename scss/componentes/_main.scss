@@ -1,0 +1,95 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: 60vh 10vh 59vh;
+    grid-template-areas:
+        "imgAvon imgNatura imgVioleta"
+        "sub-titulo1 sub-titulo2 sub-titulo3"
+        "video video mapa";
+
+    section {
+        a {
+            img {
+                grid-area: imgAvon;
+                margin: 10px;
+                height: 57vh;
+                width: 48vh;
+                display: flex;
+                justify-self: center;
+            }
+
+            h2 {
+                grid-area: sub-titulo1;
+                text-align: center;
+                font-size: larger;
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+    }
+
+    section {
+        a {
+            img {
+                grid-area: imgNatura;
+                margin: 10px;
+                height: 57vh;
+                width: 48vh;
+                display: flex;
+                justify-self: center;
+            }
+
+            h2 {
+                grid-area: sub-titulo2;
+                text-align: center;
+                font-size: larger;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    section {
+        a {
+            img {
+                grid-area: imgVioleta;
+                margin: 10px;
+                height: 57vh;
+                width: 48vh;
+                display: flex;
+                justify-self: center;
+            }
+
+            h2 {
+                grid-area: sub-titulo3;
+                text-align: center;
+                font-size: larger;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .video {
+        grid-area: video;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .mapa {
+        grid-area: mapa;
+        align-self: center;
+    }
+}
+
+main {
+    form {
+        width: 30em;
+        height: 20em;
+        padding: 1em;
+        margin: 0.5em;
+        border-radius: 0px 10px 39px 22px;
+        border: 1.5px solid rgba(7, 6, 6, 0.338);
+    }
+}
