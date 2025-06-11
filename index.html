@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
+  <!------ Funte ------>
   <link
     href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald&display=swap"
     rel="stylesheet">
+    <!------Bootstrap ---- -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!------  CSS  ------>
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -17,7 +20,8 @@
 <body>
 
   <header class="encabezado">
-      <nav class=" barra-menu navbar  bg-body-tertiary">
+    <div class="barra-menu nav-fijo">
+      <nav class="  navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Cosmetico</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -45,34 +49,59 @@
           </div>
         </div>
       </nav>
+    </div>
     <h1 class="titulo"> I Discovered Genesis Makeup</h1>
   </header>
 
 
-
-
-
   <main class="main-grid">
-    <a href="./pages/avon.html">
-      <img class="imgAvon" src="./imagenes/catalogo avon.jpg" alt="Caralogo Avon">
-    </a>
-    <a href="./pages/natura.html">
-      <img class="imgNatura" src="./imagenes/catalogo natura (5).jpg" alt="Catalogo Natura">
-    </a>
-    <a href="./pages/violeta.html">
-      <img class="imgVioleta" src="./imagenes/catalogo violeta (3).jpg" alt="Catalogo Violeta">
-    </a>
+    <section>
+      <a href="./pages/avon.html">
+        <img class="imgAvon" src="./imagenes/catalogo avon.jpg" alt="Caralogo Avon">
+        <h2 class="sub-titulo1">
+          Avon Campaña 06 2025
+        </h2>
+      </a>
+    </section>
+    <section>
+      <a href="./pages/natura.html">
+        <img class="imgNatura" src="./imagenes/catalogo natura (5).jpg" alt="Catalogo Natura">
+        <h2 class="sub-titulo2">
+          Natura Campaña 06 2025
+        </h2>
+      </a>
+    </section>
+    <section>
+      <a href="./pages/violeta.html">
+        <img class="imgVioleta" src="./imagenes/catalogo violeta (3).jpg" alt="Catalogo Violeta">
+        <h2 class="sub-titulo3">
+          Violeta Campaña 06 2025
+        </h2>
+      </a>
+    </section>
+
 
     <!--VIDEO-->
-    <iframe class="video" width="360" height="215" src="https://www.youtube.com/embed/EHWRU9CyqlU?si=U6zaYfHqsgHfVSbD"
+    <iframe class="video" width="400" height="200" src="https://www.youtube.com/embed/EHWRU9CyqlU?si=U6zaYfHqsgHfVSbD"
       title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <!-- MAPA -->
+      <iframe class="mapa" width="200" height="150" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6556.682728906865!2d-58.38230651620272!3d-34.7469927657334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1749317631286!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
 
-  <footer class="PieDepagina">
-    <p><a href="gabriel:dcoptica@gmail.com">dcmaquilla@gmail.com</a></p>
-    <p>copyright Dc maquilla - 2025. Todos los derechos reservados</p>
+  <div class="container boton">
+        <a href="https://wa.me/987654321?text=Quiero%20realizar%20un%20proyecto%20web%20php" target="_blank">
+            <img class="boton" src="./imagenes/icono.png" alt="Icono Whatsapp">
+        </a>
+    </div>
+
+  <footer>
+    <div class="pieDepagina">
+      <p><a href="gabriel:dcosme@gmail.com">dcmaquilla@gmail.com</a></p>
+      <p>copyright Dc maquilla - 2025. Todos los derechos reservados</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

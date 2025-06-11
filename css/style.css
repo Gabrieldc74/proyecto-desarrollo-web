@@ -1,21 +1,43 @@
+body{
+    background-color: rgb(232, 215, 229);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ------ HEADER -------- */
+.nav-fijo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+main a {
+    text-decoration: none;
+}
+
+button{
+    background-color: rgba(171, 110, 144, 0.851);
+    border-radius: 7px;
+    border-color:rgba(171, 110, 144, -3.149)
+}
+
+
+/* ------ HEADER INDEX Y AVON (GRID) -------- */
 
 .encabezado {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  15vh 30vh;
+    grid-template-rows:  12vh 26vh;
     grid-template-areas: "barra-menu"
     "titulo";
 }
 
 .barra-menu {
     grid-area: barra-menu;
+        background-image: linear-gradient(0deg, rgb(235, 215, 228) 0%, rgba(144, 70, 130, 0.472) 38%);
 }
 
 .titulo {
@@ -23,18 +45,20 @@
     font-family: 'Dosis', sans-serif;
     text-align: center;
     margin: 10px;
-    padding: 50px;
+    padding: 25px;
 }
 
 
-/* ------ MAIN (CONTENIDO) ------ */
+/* ------ MAIN INDEX GRID ------ */
 
 .main-grid {
     display: grid;
     grid-template-columns: (3, 1fr);
-    grid-template-rows:  70vh 50vh;
-    grid-template-areas: "imgAvon imgNatura imgVioleta"
-    "video video video";
+    grid-template-rows:  60vh 10vh 59vh;
+    grid-template-areas: 
+    "imgAvon imgNatura imgVioleta"
+    "sub-titulo1 sub-titulo2 sub-titulo3"
+    "video video mapa";
 }
 
 
@@ -65,87 +89,69 @@
     justify-self: center;
 }
 
-.video {
-    grid-area: video;
-        display: flex;
-    justify-self: center;
+.sub-titulo1 {
+    grid-area: sub-titulo1;
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    color: black;
 }
 
+.sub-titulo2 {
+    grid-area: sub-titulo2;
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+}
+
+.sub-titulo3 {
+    grid-area: sub-titulo3;
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+}
+
+.mapa {
+    grid-area: mapa;
+    align-self: center;
+}
+
+.video {
+    grid-area: video;
+    justify-self: center;
+    align-self: center;
+}
+
+/* ------ Footer grid ------  */
 footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh;
-    grid-template-areas: "footer";
+    grid-template-rows: 15vh;
+    grid-template-areas: "PieDepagina";
 }
 
-footer {
-    grid-area: footer;
-    background-color: rgb(251, 251, 251);
+.pieDepagina {
+    grid-area: PieDepagina;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgb(235, 215, 228) 0%, rgba(144, 70, 130, 0.472) 38%);
     text-align: center;
 }
 
+/* -------MAIN VIOLETA ----- */
 
-
-
-/* ------MEDIA QUERIES ----- */
-
-
-/* ---Encabezado del index ---- */
-@media only screen and (max-width: 700px) {
-    .encabezado {
-        width: 200%;
-    }
-}
-
-
-@media only screen and (max-width: 700px) {
-    .main-grid {
-        display: grid;
-        grid-template-columns: 200%;
-        grid-template-rows:  120vh 120vh 120vh 120vh;
-        grid-template-areas: "imgAvon"
-        "imgNatura"
-        "imgVioleta"
-        "video";
-    }
-
-    .imgAvon{
-        width: 80vh;
-        height: 100vh;
-    }
-
-    .imgNatura {
-        width: 80vh;
-        height: 100vh;
-    }
-
-    .imgVioleta {
-        width: 80vh;
-        height: 100vh;
-    }
-
-    .video {
-        width: 130vh;
-        height: 110vh;
-    }
-
-}
-
-@media only screen and (max-width: 700px) {
-    footer {
-        width: 200%;
-    }
-}
-
-
-/* -------VIOLETA ----- */
-
-.main-violeta {
+.main-violeta  {
     display: grid;
-    grid-template-columns: (3, 1fr);
-    grid-template-rows: 80vh 80vh;
-    grid-template-areas: "img-v-1 img-v-2 img-v-3"
-        "img-v-4 img-v-5 img-v-6"
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 67vh 9vh 6vh 67vh 9vh 6vh;
+    grid-template-areas: 
+    "img-v-1 img-v-2 img-v-3"
+    "descripcion-1 descripcion-2 descripcion-3"
+    "boton-1 boton-2 boton-3"
+    "img-v-4 img-v-5 img-v-6"
+    "descripcion-4 descripcion-5 descripcion-6"
+    "boton-4 boton-5 boton-6"
 }
 
 .img-v-1 {
@@ -154,6 +160,7 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
@@ -166,6 +173,7 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
@@ -178,6 +186,7 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
@@ -190,6 +199,7 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
@@ -202,6 +212,7 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
@@ -214,118 +225,320 @@ footer {
     width: 48vh;
     display: flex;
     justify-self: center;
+    align-self: anchor-center;
     padding: 0.6875rem;
     background-color: rgb(185, 202, 198);
     border-radius: 10px;
     flex-wrap: wrap;
 }
-
-/* ----Responsive Natura ----- */
-
-.main-natura {
-    display: grid;
-    grid-template-columns: (3, 1fr);
-    grid-template-rows:  80vh 80vh;
-    grid-template-areas: "img-n-1 img-n-2 img-n-3"
-    "img-n-4 img-n-5 img-n-6";
+.descripcion-1 {
+    grid-area: descripcion-1;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
 }
 
-.img-n-1{
-    grid-area: img-n-1;
-    height: 57vh;
-    width: 48vh;
+.descripcion-2 {
+    grid-area: descripcion-2;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.descripcion-3 {
+    grid-area: descripcion-3;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.descripcion-4 {
+    grid-area: descripcion-4;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.descripcion-5 {
+    grid-area: descripcion-5;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.descripcion-6 {
+    grid-area: descripcion-6;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.boton-1 {
+    grid-area: boton-1;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
 
-.img-n-2{
-    grid-area: img-n-2;
-    height: 57vh;
-    width: 48vh;
+.boton-2 {
+    grid-area: boton-2;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
 
-.img-n-3{
-    grid-area: img-n-3;
-    height: 57vh;
-    width: 48vh;
+.boton-3 {
+    grid-area: boton-3;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
 
-
-.img-n-4{
-    grid-area: img-n-4;
-    height: 57vh;
-    width: 48vh;
+.boton-4 {
+    grid-area: boton-4;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
 
-.img-n-5{
-    grid-area: img-n-5;
-    height: 57vh;
-    width: 48vh;
+.boton-5 {
+    grid-area: boton-5;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
 
-.img-n-6{
-    grid-area: img-n-6;
-    height: 57vh;
-    width: 48vh;
+.boton-6 {
+    grid-area: boton-6;
     display: flex;
     justify-self: center;
-    padding: 0.6875rem;
-    background-color: rgb(185, 202, 198);
-    border-radius: 10px;
-    flex-wrap: wrap;
 }
+
+/*  ---- ICONO DE WHATSAPP ---- */
+
+.container {
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: sticky;
+    z-index: 5;
+    border-radius: 50%;
+    bottom: 20px;
+    transition: ease 1.3s;
+    animation: efecto 1s normal;
+    animation-name: cambiarColor;
+    animation-duration: 6s;
+}
+
+/*  ---- ICONO DE WHATSAPP ---- */
+
+.container {
+    background-color: #2e6329;
+    border: 1px solid #fff;
+    position: sticky;
+    z-index: 5;
+    border-radius: 50%;
+    bottom: 20px;
+    transition: ease 1.3s;
+    animation: efecto 1s normal;
+    animation-name: cambiarColor;
+    animation-duration: 6s;
+}
+
+@keyframes cambiarColor {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1.6);
+    }
+    80% {
+        transform: scale(1.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.container:hover{
+    transform: scale(1.1);
+    transition: 1.3s;
+}
+
+.boton{
+    width: 80px;
+    transition: ease 1s;
+    left: 90%;
+}
+
+/* -------- Media queries index---- */
+
+@media only screen and (max-width: 950px) {
+
+    /*  ---- HEADER INDEX ---- */
+
+    .main-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:   75vh 7vh 34vh 18vh 57vh;
+    grid-template-areas:  
+    "imgNatura imgAvon"
+    "sub-titulo1 sub-titulo2"
+    "imgVioleta video"
+    "sub-titulo3 video"
+    "mapa mapa";
+}
+
+.mapa {
+    grid-area: mapa;
+    width: 250px;
+    height: 160px;
+    display: flex;
+    justify-self: anchor-center;
+}
+
+.video {
+    grid-area: video;
+    width: 230px;
+    height: 203px;
+}
+
+   /* ---- ICONO INDEX ---- */
+
+ .boton{
+        width: 80px;
+        left: 87%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+      /* ---- ICONO INDEX ---- */
+
+ .boton{
+        width: 75px;
+        left: 82%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .main-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows:   71vh 71vh 14vh 18vh 6vh 24vh 66vh 37vh;
+    grid-template-areas:  
+    "imgNatura"
+    "sub-titulo1"
+    "imgAvon"
+    "sub-titulo2"
+    "imgVioleta"
+    "sub-titulo3"
+    "video"
+    "mapa";
+}
+
+.mapa {
+    grid-area: mapa;
+    width: 232px;
+    height: 130px;
+}
+
+      /* ---- ICONO INDEX ---- */
+
+ .boton{
+        width: 60px;
+        left: 79%;
+    }
+}
+
+/* -------- MEDIA QUERIES VIOLETA---- */
 
 @media only screen and (max-width: 800px) {
+    .main-violeta  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 67vh 9vh 6vh 67vh 9vh 6vh 67vh 9vh 6vh;
+    grid-template-areas: 
+    "img-v-1 img-v-2"
+    "descripcion-1 descripcion-2"
+    "boton-1 boton-2"
+    "img-v-3 img-v-4"
+    " descripcion-3 descripcion-4"
+    " boton-3 boton-4"
+    "img-v-5 img-v-6"
+    "descripcion-5 descripcion-6"
+    "boton-5 boton-6";
+}
+}
 
-    .main-natura {
+@media only screen and (max-width: 500px) {
+    .main-violeta  {
         display: grid;
-        grid-template-columns: (2, 1fr);
-        grid-template-rows:  80vh 80vh 80vh;
-        grid-template-areas: "img-n-1 img-n-2"
-        "img-n-3 img-n-4"
-        "img-n-5 img-n-6";
+       grid-template-columns: 1fr;
+       grid-template-rows: 67vh 9vh 6vh 67vh 9vh 6vh 67vh 9vh 6vh 67vh 9vh 6vh 67vh 9vh 6vh 67vh 9vh 6vh;
+       grid-template-areas: 
+        "img-v-1"
+        "descripcion-1"
+        "boton-1"
+        "img-v-2"
+        "descripcion-2"
+        "boton-2"
+        "img-v-3"
+        "descripcion-3"
+        "boton-3"
+        "img-v-4"
+        "descripcion-4"
+        "boton-4"
+        "img-v-5"
+        "descripcion-5"
+        "boton-5"
+        "img-v-6"
+        "descripcion-6"
+        "boton-6";
     }
 }
 
-@media only screen and (max-width: 600px) {
 
-    .main-natura {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows:  80vh 80vh 80vh 80vh 80vh 80vh;
-        grid-template-areas: "img-n-1"
-        "img-n-2"
-        "img-n-3"
-        "img-n-4"
-        "img-n-5"
-        "img-n-6";
-    }
+/* ----------VIOLETA Y AVON CON FLEXBOX ---------*/
+
+
+.main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    width: 100%;
+    height: 100%;
 }
+
+.img-flex-1{
+    height: 57vh;
+    width: 48vh;
+    align-self: anchor-center;
+    padding: 0.6875rem;
+    background: radial-gradient(circle,rgba(255, 219, 237, 1) 65%, rgba(148, 187, 233, 1) 100%);
+    border-radius: 10px;
+}
+
+.sub-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-flex {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(209, 0, 188);
+
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0deg, rgb(235, 215, 228) 0%, rgba(144, 70, 130, 0.472) 38%);
+}
+
+.pie-pag-flex a {
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
